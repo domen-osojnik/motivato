@@ -1,3 +1,9 @@
+export interface Movie {
+    id: number;
+    name: string;
+    year: number;
+}
 export declare class AppService {
-    getHello(): string;
+    private movies;
+    getMovies(): Movie[];
 }

@@ -9,8 +9,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppService = void 0;
 const common_1 = require("@nestjs/common");
 let AppService = class AppService {
-    getHello() {
-        return 'Hello World!';
+    constructor() {
+        this.movies = [
+            { id: 1, name: "Star Wars: The Force Awakens", year: 2015 },
+            { id: 2, name: "Star Wars: The Last Jedi", year: 2017 },
+            { id: 3, name: "Star Wars: The Rise of Skywalker", year: 2019 },
+        ];
+    }
+    getMovies() {
+        return this.movies;
     }
 };
 AppService = __decorate([

@@ -9,26 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppController = void 0;
+exports.UserController = void 0;
 const common_1 = require("@nestjs/common");
-const app_service_1 = require("./app.service");
-let AppController = class AppController {
-    constructor(appService) {
-        this.appService = appService;
+const user_entity_1 = require("../Models/user.entity");
+const user_service_1 = require("../Services/user.service");
+let UserController = class UserController {
+    constructor(userService) {
+        this.userService = userService;
     }
-    getMovies() {
-        return this.appService.getMovies();
+    async getAllUsers() {
+        return await this.userService.getAllUsers();
     }
 };
 __decorate([
     common_1.Get(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", Array)
-], AppController.prototype, "getMovies", null);
-AppController = __decorate([
+    __metadata("design:returntype", Promise)
+], UserController.prototype, "getAllUsers", null);
+UserController = __decorate([
     common_1.Controller(),
-    __metadata("design:paramtypes", [app_service_1.AppService])
-], AppController);
-exports.AppController = AppController;
-//# sourceMappingURL=app.controller.js.map
+    __metadata("design:paramtypes", [user_service_1.UserService])
+], UserController);
+exports.UserController = UserController;
+//# sourceMappingURL=user.controller.js.map

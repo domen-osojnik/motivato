@@ -6,19 +6,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppModule = void 0;
+exports.UserModule = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
-const app_dbconfig_1 = require("./Config/app.dbconfig");
-const user_module_1 = require("./Modules/user.module");
-let AppModule = class AppModule {
+const user_controller_1 = require("../Controllers/user.controller");
+const user_entity_1 = require("../Models/user.entity");
+const user_service_1 = require("../Services/user.service");
+let UserModule = class UserModule {
 };
-AppModule = __decorate([
+UserModule = __decorate([
     common_1.Module({
-        imports: [user_module_1.UserModule, typeorm_1.TypeOrmModule.forRootAsync(app_dbconfig_1.typeOrmConfigAsync)],
-        controllers: [],
-        providers: [],
+        imports: [typeorm_1.TypeOrmModule.forFeature([user_entity_1.User])],
+        controllers: [user_controller_1.UserController],
+        providers: [user_service_1.UserService],
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], UserModule);
+exports.UserModule = UserModule;
+//# sourceMappingURL=user.module.js.map
