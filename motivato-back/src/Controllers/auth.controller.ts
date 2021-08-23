@@ -3,13 +3,12 @@ https://docs.nestjs.com/controllers#controllers
 Controller containing authentication access points such as login, logout and register.
 */
 
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post } from "@nestjs/common";
 
-@Controller('auth')
+@Controller("auth")
 export class AuthController {
-    constructor(){}
+  constructor() {}
 
-    @Post('register') {
-        
-    }
+  @Post("register")
+  register(): void {}
 }

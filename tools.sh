@@ -2,17 +2,17 @@
 # Bash Menu Script Example
 
 PS3='Please enter your choice: '
-options=("Option 1" "Option 2" "Option 3" "Quit")
+options=("1. Run web API (Nest.js)" "2. Run web (React.js)" "3. Quit")
 select opt in "${options[@]}"
 do
     case $opt in
-        "Run web API (Nest.js)")
-            open -a Terminal.app webapirun
+        "1. Run web API (Nest.js)")
+            open -a Terminal.app webapirun.sh
             ;;
-        "Run web (React.js)")
-            open -a Terminal.app webrun
+        "2. Run web (React.js)")
+            open -a Terminal.app webrun.sh
             ;;
-        "Quit")
+        "3. Quit")
             break
             ;;
         *) echo "invalid option $REPLY";;
