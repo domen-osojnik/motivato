@@ -1,4 +1,6 @@
-// This file contains the connection logic to database. All variables are stored in the env files.
+/*
+This file contains the connection logic to database. All variables are stored in the env files.
+*/
 import { Inject } from "@nestjs/common";
 import { ConfigModule, ConfigService } from "@nestjs/config";
 import {

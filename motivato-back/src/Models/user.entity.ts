@@ -2,6 +2,9 @@
 import { Entity, Column } from "typeorm";
 import { BaseEntity } from "./base.entity";
 
+/*
+User entity containing basic user information.
+*/
 @Entity({ name: "user" })
 export class User extends BaseEntity {
   // (+) Name of user

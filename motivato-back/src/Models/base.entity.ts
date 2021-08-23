@@ -5,6 +5,9 @@ import {
   CreateDateColumn,
 } from "typeorm";
 
+/*
+Base entity for all DB entities.
+*/
 export abstract class BaseEntity {
   // (+) Basic ID which every entity will have.
   @PrimaryGeneratedColumn("uuid")
