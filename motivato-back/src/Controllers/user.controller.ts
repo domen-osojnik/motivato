@@ -1,5 +1,5 @@
 /*
-API containing user logic, such as login, logout and registration.
+API containing user logic, such as profile editing.
 */
 
 import { Controller, Get } from "@nestjs/common";
