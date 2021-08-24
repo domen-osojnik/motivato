@@ -15,7 +15,7 @@ import { UserModule } from "./Modules/user.module";
     UserModule,
     TypeOrmModule.forRootAsync(typeOrmConfigAsync),
   ],
-  controllers: [PostController, AuthController],
-  providers: [AuthService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
