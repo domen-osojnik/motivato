@@ -7,6 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
+const auth_module_1 = require("./Modules/auth.module");
+const post_module_1 = require("./Modules/post.module");
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const app_dbconfig_1 = require("./Config/app.dbconfig");
@@ -15,7 +17,12 @@ let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [user_module_1.UserModule, typeorm_1.TypeOrmModule.forRootAsync(app_dbconfig_1.typeOrmConfigAsync)],
+        imports: [
+            auth_module_1.AuthModule,
+            post_module_1.PostModule,
+            user_module_1.UserModule,
+            typeorm_1.TypeOrmModule.forRootAsync(app_dbconfig_1.typeOrmConfigAsync),
+        ],
         controllers: [],
         providers: [],
     })

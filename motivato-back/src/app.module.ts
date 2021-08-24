@@ -13,7 +13,7 @@ import { UserModule } from "./Modules/user.module";
     AuthModule,
     PostModule,
     UserModule,
-    TypeOrmModule.forRootAsync(typeOrmConfigAsync),
+    TypeOrmModule.forRootAsync(typeOrmConfigAsync), // (+) This will import the config which contains DB information
   ],
   controllers: [],
   providers: [],
