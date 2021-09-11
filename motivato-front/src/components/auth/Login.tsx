@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 class LoginComponent extends React.Component {
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.state = {};
   }
