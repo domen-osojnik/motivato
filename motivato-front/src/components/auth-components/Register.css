@@ -1,0 +1,62 @@
+Card {
+  padding: 10px;
+}
+
+.register-card {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-text-signup {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 41px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.25px;
+  color: #322d38;
+}
+
+.header-text-sub {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  text-align: center;
+
+  /* Dark */
+
+  color: #322d38;
+}
+
+.alt-text {
+  color: #de8667;
+}
+
+.profile-image {
+  margin-top: 16px;
+}
+
+.form-section-wrap {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}

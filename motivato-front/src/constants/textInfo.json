@@ -1,4 +1,7 @@
 {
   "LoginButtonText": "Sign up",
-  "RegisterButtonText": "Login"
+  "RegisterButtonText": "Login",
+  "SignUpTitleBlack": "What is your",
+  "SignUpTitleEnd": "name?",
+  "SignUpTitleSub": "Your name will appear on quotes and your public profle."
 }

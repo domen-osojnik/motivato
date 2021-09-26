@@ -1,74 +1,39 @@
-/* Navigation */
-
-/* Auto Layout */
+/* Nav wrapper */
 .navigation {
   display: flex;
-  height: 40px;
-  width: 1300px;
-  left: 70px;
-  top: 46px;
-  border-radius: 0px;
-
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  padding: 0px;
-
-  position: absolute;
   height: 40px;
-  left: 70px;
-  right: 70px;
-  top: calc(50% - 40px / 2 - 446px);
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 46px;
 }
 
 .frame {
-  /* Frame */
-
-  /* Auto Layout */
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1px 8px;
-
-  position: static;
-  width: 131.76px;
-  height: 25.5px;
+  height: 25.500045776367188px;
+  width: 131.7594451904297px;
   left: 0px;
-  top: 7.25px;
+  top: 7.249977111816406px;
+  border-radius: 0px;
+  padding: 1px, 8px, 1px, 8px;
 }
 
 .right-side {
-  /* Right side */
-
-  /* Auto Layout */
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-
-  position: static;
-  width: 137px;
   height: 40px;
+  width: 137px;
   left: 1163px;
   top: 0px;
+  border-radius: 0px;
 }
 
 .buttons {
-  /* Buttons */
-
-  /* Auto Layout */
-
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
-
-  position: static;
-  width: 137px;
   height: 40px;
+  width: 137px;
   left: 0px;
   top: 0px;
+  border-radius: 0px;
+}
+
+Link {
+  text-decoration: none;
 }

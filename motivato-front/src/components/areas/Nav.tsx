@@ -1,38 +1,46 @@
 import React from "react";
-
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Button, ButtonText } from "../../styles/globalStyles";
-import LoginComponent from "../auth/Login";
-import RegisterComponent from "../auth/Register";
+import { useLocation } from "react-router-dom";
+import { Button, ButtonText, StyledLink } from "../../styles/globalStyles";
 import "./nav.css";
+import QuotasticLogo from "../../resources/Group.svg";
+
+function LoginButton(props: any) {
+  return (
+    <Button type="secondary">
+      <ButtonText type="secondary">Login</ButtonText>
+    </Button>
+  );
+}
+
+function RegisterButton(props: any) {
+  return (
+    <Button type="primary">
+      <ButtonText type="primary">Register</ButtonText>
+    </Button>
+  );
+}
 
 const Nav = (props: any) => {
+  let url = useLocation();
+  let isLoginPage = false;
+
+  let button;
+  if (url.pathname === "/login") {
+    isLoginPage = true;
+    button = RegisterButton(null);
+  } else if (url.pathname === "/register") {
+    button = LoginButton(null);
+  }
   return (
     <div className="navigation">
-      <div className="frame"></div>
+      <div className="frame">
+        <img src={QuotasticLogo} alt="Missing logo svg" />
+      </div>
       <div className="right-side">
         <div className="buttons">
-          <Router>
-            <Button type="secondary">
-              <ButtonText>LoginNNNNN</ButtonText>
-              {/* <Link to="/login">Login</Link> */}
-            </Button>
-            {/* <Button variant="contained" color="secondary">
-            <Link to="/login">Login</Link>
-          </Button>
-          <Button variant="contained" color="primary">
-            <Link to="/register">Register</Link>
-          </Button> */}
-
-            <Switch>
-              <Route path="/login">
-                <LoginComponent />
-              </Route>
-              <Route path="/register">
-                <RegisterComponent />
-              </Route>
-            </Switch>
-          </Router>
+          <StyledLink to={isLoginPage ? "/register" : "/login"}>
+            {button}
+          </StyledLink>
         </div>
       </div>
     </div>
